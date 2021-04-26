@@ -161,7 +161,7 @@ int main(){
  		
  	}
  	
- 	 usuarios<<nu<<"\n";
+ 	 usuarios<<nu+"\n";
  	 usuarios.close();
  	 	system("cls");
  	    cout<<"Registro exitoso";
