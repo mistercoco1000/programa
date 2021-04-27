@@ -8,6 +8,7 @@
 #include<locale.h>
 #include<wchar.h>
 #include<mysql.h>
+
 using namespace std;
 
 string nombre, usuario[100];
@@ -38,10 +39,32 @@ Registro_lectura::Registro_lectura(string _registro_del_nombre, string _lectura_
 }
 
 void iniciar_sesion();
+void bienvenida();
 
 Registro_lectura nombres(nombre,nombre); 
 
 int main(){
+	
+	
+	
+	MYSQL *conn;
+	MYSQL_ROW row;
+	MYSQL_RES *res;
+	
+	
+	conn = mysql_init(0);
+	conn = mysql_real_connect(conn,"localhost","root","","registro_de_inventario",0,NULL,0);
+	
+	if(conn){
+		
+		system("color a ");
+		cout<<"hola";
+		
+	}else{
+		
+		system ("color b");
+		cout<<"hola :V";
+	}
 	
 	bool d1;
 	
@@ -162,9 +185,7 @@ void iniciar_sesion(){
 			}
 		}
 		
-		
-		
-		if(acceder){
+				if(acceder){
 		
 		
 		
@@ -223,6 +244,7 @@ void iniciar_sesion(){
 				getch();
 				system("cls");
 			}
+
 	};
 	
 }
