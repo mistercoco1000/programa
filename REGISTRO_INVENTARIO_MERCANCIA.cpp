@@ -9,6 +9,7 @@
 #include <locale.h>
 #include <wchar.h>
 #include<mysql.h>
+
 using namespace std;
 
 string nombre, usuario[100];
